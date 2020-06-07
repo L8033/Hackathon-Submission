@@ -1,0 +1,294 @@
+#This was coded in Python 3.8.2
+import time
+import random
+import sys
+from time import sleep
+
+def letterprint(words):
+  for char in words:
+    sleep(0.05)
+    sys.stdout.write(char)
+    sys.stdout.flush()
+  print('''
+''')
+
+def game(sleeptime):
+  game_name = "Virus Escape!"
+  print ("Welcome to", game_name,)
+  time.sleep(sleeptime)
+  letterprint ("The year is 2020, and mankind is plagued by a strange new disease known as the Coronavirus. The disease has swept across not only your nation but across the world. You face loneliness and fear as you follow the stay-at-home order, which forces you to socially distance from all of your peers and extended family. How will you fare in this (definitely hypothetical) universe?")
+  time.sleep(sleeptime)
+  yourname = input('''First, what is your name?
+''')
+  time.sleep(sleeptime)
+  letterprint("".join(["Hello ", yourname+"!"]))
+  time.sleep(sleeptime)
+  while (True):
+    response = input('''Are you ready to get started? Type yes or no. 
+''').lower()
+    if response in ["yes","y"]:
+      time.sleep(sleeptime)
+      letterprint("Then let's begin the journey!")
+      break
+    elif response in ["no","n"]:
+      time.sleep(sleeptime)
+      letterprint("What a shame. You're missing out. I'll ask again just in case.")
+    else:
+      time.sleep(sleeptime)
+      letterprint("INVALID ANSWER! Please enter yes or no.")
+    
+    #game start wwhuehweuhewuhuhuehueheuheuheuehueh
+  letterprint(''' You wake up after a long night's sleep. You yawn as you turn over to check your phone, and see your newest reminder on your home screen. It's from your school, telling you the first day of online school is tomorrow. It's like normal life, but sheltered in place with nobody but your family''')
+  
+  letterprint('''You are not excited.''')
+
+  letterprint('''You scroll through the message, reading over all of the precautions that are supposed to be taken during the global pandemic. Social Distancing entails that people be 6 feet apart at all times, and that masks and gloves are to be worn. Everything you've been hearing on the news, and more. At this point, sanitation is considered essential.''')
+  
+  letterprint('''As you read, you see a notification pop up from your friend Maya. You click on it, and it reads as:''')
+  time.sleep(sleeptime)
+  print("Maya: You wanna come over and play some games", yourname+"?")
+  time.sleep(sleeptime)
+  while (True):
+    letterprint('''Do you:
+  (A) Text back yes, and sneak out of your house in the middle of the day.
+  (B) Text back no, and go be productive.
+  (C) Text back That's not fair, you know we can't hang out.''')
+    response = input('''Type a, b or c to choose your response.
+''').lower()
+    if response == "a":
+      time.sleep(sleeptime)
+      print(yourname+": Yes!")
+      letterprint('''
+You hang out with Maya, and you guys have a lot of fun. A few days later, you hear that Maya has fallen ill and is now in the hospital. You swallow nervously, and wait for more news.''')
+      time.sleep(sleeptime)
+      letterprint('''As the days go by, you feel weaker and start coughing. Everything hurts and you’re transported to the hospital, sirens blaring.''')
+      time.sleep(sleeptime)
+      letterprint('''They sedate you and stick some kind of tube down your throat. A ventilator. You think absently, as you drift in and out of consciousness.''')
+      letterprint('''After a few weeks in the hospital, you recover. Maya, however, does not.''')
+      break
+    elif response == "b":
+      time.sleep(sleeptime)
+      letterprint(''' You click send and await a response. You hear a 'Bing' and read:
+Maya: Oh, alright.''')
+      break
+    elif response == "c":
+      time.sleep(sleeptime)
+      letterprint('''You click send and await a response. You hear a 'Bing' and read:
+Maya: Ugh. It doesn’t matter, I guess I won't get the ‘rona.''')
+      time.sleep(sleeptime)
+      print('''
+You: Well… okay then I guess…
+''')
+      break
+    else:
+      time.sleep(sleeptime)
+      letterprint("Invalid answer")
+  
+  time.sleep(sleeptime)
+  letterprint('''Next, you decide to get out of bed and head downstairs.
+You see your mother in the kitchen, putting away dishes. She looks over her shoulder, noticing you walking into the kitchen in your quest for a meal.
+She looks at her watch, and says 'Go get us food or we are going to starve'.
+You nod, as you grab an avocado out of the fridge. You go up to your room, and pick out an outfit for the day.
+Your options are:
+  (A) Black skinny jeans and a black hoodie. I don’t care if it’s 30 degrees celsius outside. I look good in black.
+  (B) T-shirt and shorts
+  (C) Absolutely nothing at all (why not?)''')
+  while (True):
+    time.sleep(sleeptime)
+    response = input('''Type a, b or c to choose your response.
+''').lower()
+    if response in ["a","b"]:
+      time.sleep(sleeptime)
+      letterprint("Nice Choice!")
+      break
+    elif response == "c":
+      time.sleep(sleeptime)
+      letterprint("Uh… I doubt your neighborhood wants to see that. Emperor’s new clothes and all that, but I think you need to rethink your life choices. Choose again.")
+    else:
+      time.sleep(sleeptime)
+      letterprint("Invalid answer")
+
+  letterprint('''You then wander back downstairs, consumed avocado in hand, listening to the faint muttering of the news downstairs.
+As you go to throw away the avocado pit and shell, you grab your keys off of the kitchen table and head out.
+  
+Your mother shouts from the living room. 'Don’t forget to wear a mask!'
+  (A) You decide not to wear a mask
+  (B) You wear a mask
+  (C) You tell your mother she is lame, and put on a scarf over your mouth.''')
+  while (True):
+    time.sleep(sleeptime)
+    response = input('''Type a, b or c to choose your response.
+''').lower()
+    if response == "a":
+      time.sleep(sleeptime)
+      letterprint("You catch the virus when an old man shopping beside you coughs on you. You end up in the hospital waiting room and never get treatment.")
+      time.sleep(sleeptime)
+      letterprint("You end up losing consciousness and dying in the waiting room.")
+      return ("Lose")
+    
+    elif response == "b":
+      time.sleep(sleeptime)
+      letterprint("You head to the store safely, and shop in peace.")
+      break
+    elif response == "c":
+      time.sleep(sleeptime)
+      letterprint("You survive the pandemic, but your mother kills you anyways.")
+      return("Lose")
+    time.sleep(sleeptime)
+    letterprint("Invalid answer")
+  
+  letterprint("You go to the store, and you see that they have a surplus of toilet paper and hand sanitizer in stock. ")
+  time.sleep(sleeptime)
+  letterprint("You check your shopping list, and see that you are in need of toilet paper, and see that the stocks are depleting fast. ")
+  time.sleep(sleeptime)
+  letterprint('''In front of you, you see several people fighting over the toilet paper, and you rush in to get some of your own. You haven’t been able to get toilet paper in a very long time.
+
+  Your options are:
+  A) Take only the amount you absolutely need
+  B) Take all of the toilet paper. The sanitizer too.
+  C) Not buy any toilet paper.''')
+  while(True):
+    time.sleep(sleeptime)
+    response = input('''
+  Type a, b or c to choose your response.
+''').lower()
+    if response == "a":
+      time.sleep(sleeptime)
+      letterprint("Perfect! You didn’t spend too much money, and you have enough toilet paper.")
+      break
+    elif response == "b":
+      time.sleep(sleeptime)
+      letterprint("our wallet feels suddenly very light. That was a lot of money you spent on toilet paper. Anyways, at least you’ll have an overflowing supply of toilet paper and hand sanitizer.")
+      time.sleep(sleeptime)
+      letterprint("However, the rest of the town suffers greatly. Everyone around you catches the virus from going to the store to look for hand sanitzer and toilet paper.")
+      time.sleep(sleeptime*2)
+      letterprint("That's a lot of people that died because of your selfish needs. Your neighbors see your stash of toilet paper and get furious. They team up and kill you.")
+      return("Lose")
+    elif response == "c":
+      time.sleep(sleeptime)
+      letterprint("You get by for the first few days. Then you run out of toilet paper. You frantically search the stores for toilet paper, but its all out of stock.")
+      time.sleep(sleeptime*2)
+      letterprint("You don't die, just have to suffer through the rest of quarantine without toilet paper. You really should have bought it when you had the chance.")
+      return("Lose")
+    time.sleep(sleeptime)
+    letterprint("Invalid answer.")
+
+  letterprint('''You return from the store. What do you do with the groceries?
+  
+  A) Wipe them down with a bleach wipe before you put them away.
+  B) Eat them. Right then and there. Consume them all.
+  C) Put them in the fridge, but don’t wipe them down first''')
+  while(True):
+    time.sleep(sleeptime)
+    response = input('''
+  Type a, b or c to choose your response.
+''').lower()
+    if response == "a":
+      time.sleep(sleeptime)
+      letterprint("You successfully maintain your health.")
+      break
+    elif response == "b":
+      time.sleep(sleeptime)
+      letterprint("Mmm, these vegetables taste good! A few days later, you come down with what seems like the stomach flu. You feel horrible for a few days.")
+      if i == 1:
+        time.sleep(sleeptime)
+        letterprint("Luckily, you recover from your sickness!")
+        i = random.randint(1,2)
+        break
+      else:
+        time.sleep(sleeptime)
+        letterprint("You die because your sickness gets worse.")
+        return("Lose")
+    elif response == "c":
+      time.sleep(sleeptime)
+      letterprint("You place your groceries in the fridge, but you remember to wash your hands every time before you prepare meals or grab something to eat.")
+      time.sleep(sleeptime)
+      letterprint("Unfortunately, you forget one time before preparing a meal, something you don’t realize until after you’ve prepared the whole meal.")
+      time.sleep(sleeptime)
+      letterprint("Luckily, the virus only lasts on surfaces for up to 5 days, and that day happened to be the sixth. You also cooked the vegetables. Phew.")
+      break
+    time.sleep(sleeptime)
+  while(True):
+    letterprint('''After you have finished putting away the groceries, what is the first thing you choose to do?
+    A) Wash hands for 10 seconds
+    B) Wash hands for 20 seconds
+    C) Bathe in Essential Oils''')
+    time.sleep(sleeptime)
+    response = input('''
+    Type a, b or c to choose your response.
+    ''').lower()
+    if response == "a":
+      time.sleep(sleeptime)
+      letterprint('''You should be washing them for longer. The CDC reccomends washing them for 15 seconds or more. You are lucky. This time, you are safe, and don't catch anything. Next time your immune system might not be so lucky''') 
+      break
+    elif response == "b":
+      time.sleep(sleeptime)
+      letterprint('''You have properly cleansed your hands! You are safe from the virus. A quick trick is to sing Welcome To The Black Parade from the beginning of the vocals to "the broken, the beaten and the damned."''')
+      break
+    elif response == "c":
+      letterprint("But why though.... Please choose another answer.")
+    time.sleep(sleeptime)
+    letterprint ("Please enter a valid letter.")
+  
+  letterprint('''Then, your mom asks if you’ll drop some groceries off at your grandma’s house since it’s unsafe for the grandma to go outside. You drive to the next city over to visit your Grandma, over the hills and end up at her house. When you need to drop the groceries off at her house, do you:
+    
+  A) Wear a mask and gloves, but drop off the groceries in front of her door and stand six feet away in order to follow the social distancing proctols. 
+  B) Wear a mask and gloves, and meet her right at the door to hug her.
+  C) Choose not to wear gloves but wear a mask, and put all of the groceries away in your grandma’s fridge for her.''')
+  while(True):
+    time.sleep(sleeptime)
+    response = input('''Type a, b or c to choose your response.
+''').lower()
+    if response == "a":
+      time.sleep(sleeptime)
+      letterprint("You completely avoid contact with your grandma. Although she's a bit disappointed, she understands. She calls later to tell you she's proud of you for following protocol.")
+      break
+    elif response == "b":
+      time.sleep(sleeptime)
+      if i == 1:
+        letterprint('''Luckily for you, your Grandma was not infected with the virus.''')
+        break
+      else:
+        letterprint('''Unfortunately, since your mask was contaminated, your grandma caught the virus and didn’t make it.''')
+        return("Lose")
+    elif response == "c":
+      time.sleep(sleeptime)
+      letterprint('''Your grandma thanks you and reminds you to wash your hands after you get home.''')
+      break
+    letterprint("Please enter a valid letter. You should know how to do this by now. C'mon.")
+
+  letterprint('''As you drive back, night begins to fall. You see the sun fall behind the hill, leaving the drippings of a sunset behind it in the sky. You walk into your house, hearing clicking coming from the kitchen. Your dad’s head appears around the corner, and he asks you how your drive went. You tell him fine, of course, as you followed all of the health precautions that the World Health Organization has put in place. He asks you if you would like to help make dinner, and you say yes.''')
+  while(True):
+    response = input('''What is the first thing you do?
+    A) You wash your hands, then get the groceries out of the fridge to prepare the meal.
+    B) You get the groceries out of the fridge, and then wash your hands before preparing the meal.
+    C) You tell him you don’t want to help make dinner.
+''').lower()
+    if response == "a":
+      letterprint("It was good to wash your hands beforehand, but you didn't actually keep the food clean because you touched the packaging before you helped with dinner.")
+      while(True):
+        response = input('''What do you choose to do?
+      A) Re-wash your hands
+      B) Don't re-wash your hands
+      ''').lower
+        if response == "a":
+          letterprint("Good idea! You maintain your health while cooking dinner.")
+          break
+        elif response == "b":
+          letterprint("I told you to re-wash your hands. You end up touching the bags that have been contaminated and contracting the coronavirus.")
+          Return ("Lose")
+      break
+    elif response == "b":
+      letterprint("Good Idea! This way, you maintain your health and are able to successfully prepare dinner!")
+      break
+    elif response == "c":
+      letterprint("That was mean. But luckily you didn't run the risk of being put in harm's way.")
+      break
+  else:
+      letterprint("Please enter a valid letter.")
+
+if game(0.75) == "Lose":
+  print("You lose")
+else:
+  letterprint("Congratulations! You have survived a day of the Pandemic. Make sure to follow the procedures that were outlined in this game to stay healthy even while in quarantine!")
+  time.sleep(20)
